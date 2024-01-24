@@ -1,30 +1,10 @@
--- Step: 01
--- Goal: Create a new database mvc-2209a-P4
--- **********************************************************************************
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
 
--- Check if the database exists
-DROP DATABASE IF EXISTS `Be-opdracht-02`;
+DROP DATABASE IF EXISTS `BE-Opdracht-4`;
 
--- Create a new Database
-CREATE DATABASE IF NOT EXISTS `Be-opdracht-02`;
+CREATE DATABASE IF NOT EXISTS `BE-Opdracht-4`;
 
--- Use database Mvc-2209a-P4
-Use `Be-opdracht-02`;
+Use `BE-Opdracht-4`;
 
-
--- Step: 02
--- Goal: Create a new table Instructeur
--- **********************************************************************************
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
-
--- Drop table Instructeur
 DROP TABLE IF EXISTS Instructeur;
 
 CREATE TABLE IF NOT EXISTS Instructeur
@@ -43,16 +23,6 @@ CREATE TABLE IF NOT EXISTS Instructeur
 
    ,CONSTRAINT      PK_Instructeur_Id   PRIMARY KEY CLUSTERED(Id)
 ) ENGINE=InnoDB;
-
-
--- Step: 03
--- Goal: Fill table Instructeur with data
--- **********************************************************************************
-
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
 
 INSERT INTO Instructeur
 (
@@ -74,17 +44,6 @@ VALUES
     ,('Bert', 'van', 'Sali', '06-48293823', '2023-01-10', '****', 1, NULL, SYSDATE(6), SYSDATE(6))
     ,('Mohammed', 'El', 'Yassidi', '06-34291234', '2010-06-14', '*****', 1, NULL, SYSDATE(6), SYSDATE(6));
 
-
-
--- Step: 04
--- Goal: Create a new table TypeVoertuig
--- **********************************************************************************
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
-
--- Drop table TypeVoertuig
 DROP TABLE IF EXISTS TypeVoertuig;
 
 CREATE TABLE IF NOT EXISTS TypeVoertuig
@@ -99,16 +58,6 @@ CREATE TABLE IF NOT EXISTS TypeVoertuig
 
    ,CONSTRAINT      PK_TypeVoertuig_Id   PRIMARY KEY CLUSTERED(Id)
 ) ENGINE=InnoDB;
-
-
--- Step: 05
--- Goal: Fill table TypeVoertuig with data
--- **********************************************************************************
-
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
 
 INSERT INTO TypeVoertuig
 (
@@ -125,17 +74,6 @@ VALUES
     ,('Bus', 'D', 1, NULL, SYSDATE(6), SYSDATE(6))
     ,('Bromfiets', 'AM', 1, NULL, SYSDATE(6), SYSDATE(6));
 
-
-
--- Step: 06
--- Goal: Create a new table Voertuig
--- **********************************************************************************
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
-
--- Drop table Voertuig
 DROP TABLE IF EXISTS Voertuig;
 
 CREATE TABLE IF NOT EXISTS Voertuig
@@ -154,16 +92,6 @@ CREATE TABLE IF NOT EXISTS Voertuig
    ,CONSTRAINT      PK_Voertuig_Id   PRIMARY KEY CLUSTERED(Id)
    ,CONSTRAINT      FK_Voertuig_TypeVoertuigId_TypeVoertuig_Id  FOREIGN KEY (TypeVoertuigId) REFERENCES TypeVoertuig(Id)
 ) ENGINE=InnoDB;
-
-
--- Step: 07
--- Goal: Fill table Voertuig with data
--- **********************************************************************************
-
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
 
 INSERT INTO Voertuig
 (
@@ -191,17 +119,6 @@ VALUES
     ,('STP-12-U', 'Vespa', '2022-07-02', 'Benzine', 4, 1, NULL, SYSDATE(6), SYSDATE(6))
     ,('45-SD-23', 'Renault', '2023-01-01', 'Diesel', 3, 1, NULL, SYSDATE(6), SYSDATE(6));
 
-
-
--- Step: 08
--- Goal: Create a new table VoertuigInstructeur
--- **********************************************************************************
--- Version       Date:           Author:                     Description:
--- *******       **********      ****************            ******************
--- 01            04-04-2023      Arjan de Ruijter            New
--- **********************************************************************************/
-
--- Drop table VoertuigInstructeur
 DROP TABLE IF EXISTS VoertuigInstructeur;
 
 CREATE TABLE IF NOT EXISTS VoertuigInstructeur

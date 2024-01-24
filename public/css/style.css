@@ -1,35 +1,43 @@
 body {
-    font-family: Verdana;
-    font-size: 18px;
-  }
-  
-  *{
-    box-sizing: border-box;
-  }
-  
-  table {
-    border: 2px solid gray;
-    border-collapse: collapse;
-    margin-top: 1em;
-    text-align: center;
-  }
-  
-  th, td {
-    border: 2px solid gray;
-    padding:.2em;
-  }
-  
-  .button{
-    background-color: rgb(70, 184, 70);
-    color: black;
-    text-decoration: none;
-    padding: .5rem;
-    border-radius: .5rem;
-    box-shadow: .3rem .3rem 0 rgba(0, 0, 0, 0.493);
-    margin: 1rem;
-    transition: box-shadow cubic-bezier(1, 0.01, 0, 0.92) .3s;
-  }
-  
-  .button:hover{
-    box-shadow: .2rem .2rem 0 rgba(0, 0, 0, 0.6);
-  }
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
